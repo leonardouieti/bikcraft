@@ -1,0 +1,76 @@
+.bicicletas-lista {
+  padding-top: 60px;
+  padding-bottom: 10px;
+}
+
+/*
+  Código do professor abaixo e não deu certo no meu.
+ .bicicletas-lista ul {
+   display: flex;
+   gap: 40px;
+  Fiz o .teste e deu certo.
+} */
+
+.bicicletas-lista h2 {
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mostruario-3bicicletas {
+  display: flex;
+  gap: 40px;
+  padding: 0px 20px 20px 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bicicletas-lista img {
+  flex: 1;
+  min-width: 280px;
+}
+
+.bicicletas-lista li {
+  overflow: auto;
+}
+
+.mostruario-3bicicletas img {
+  margin-bottom: 16px;
+}
+
+.mostruario-3bicicletas h3 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.mostruario-3bicicletas h3::before {
+  content:"";
+  display: inline-block;
+  height: 8px;
+  width: 12px;
+  margin-right: 8px;
+  background-color: var(--cor-p1);
+  transition: width 0.4s;
+}
+
+.mostruario-3bicicletas a:hover h3::before {
+  width: 24px;
+}
+
+.bicicletas-lista li span {
+  padding-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .mostruario-3bicicletas {
+    padding-bottom: 60px;
+    gap: 20px;
+  }
+
+}
