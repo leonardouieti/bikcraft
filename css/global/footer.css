@@ -1,0 +1,70 @@
+.footer-bg {
+  background-color: var(--cor-12);
+} 
+
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 5fr 4fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer h3 {
+  margin-bottom: 32px;
+}
+
+.footer-contato ul {
+  margin-bottom: 32px;
+}
+
+/* O nth-child(even) faz uma linha abaixo dos elementos 2 e 4;*/ 
+.footer-contato li:nth-child(even):after {
+  content: "";
+  display: block;
+  max-width: 360px;
+  height: 2px;
+  background: var(--cor-11);
+  margin-top: 16px;
+}
+
+.footer li {
+  margin-bottom: 16px;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 32px;
+}
+
+/* Todos os links, ao passar com o mouse em cima, ficará branco */
+.footer a:hover {
+  color: var(--cor-0);
+}
+
+.footer-copy {
+  grid-column: 1/-1;
+    margin-top: 40px;
+  text-align: center;
+}
+
+/* o display none vai retirar a imagem (logo) quando ficar no responsivo */
+@media (max-width: 800px) {
+  .footer>img {
+    display: none;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Gap 60px aumentou a distancia entre os icones e informações */
+@media (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .footer-copy {
+    margin-top: 0px;
+  }
+}
