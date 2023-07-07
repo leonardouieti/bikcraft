@@ -1,0 +1,81 @@
+.bicicletas-bg {
+  background: var(--cor-11);
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bicicletas-imagem {
+  position: relative;
+}
+
+/* display inline-block para deixar alinhado preço embaixo da imagem; para deixar o preço dentro d foto, o pai (bicicletas-imagem) fica relative e o filho absolute */
+
+.bicicletas-imagem span {
+  display: inline-block;
+  background: var(--cor-12);
+  padding: 8px 16px 8px 8px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+
+/* grid-column 1/-1 faz com que h2 e p fiquem de ponta a ponta e nao um embaixo do outro */
+.bicicletas h2,
+.bicicletas p {
+  grid-column: 1/-1 ;
+}
+
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+
+/* h2::before vai ser elemento amarelo acima do nome da bicicleta */
+.bicicletas h2::before {
+ content: "";
+ display: block;
+ width: 12px;
+ height: 8px;
+ background-color: var(--cor-p1);
+ margin-bottom: 8px;
+}
+
+.bicicletas p {
+  margin-bottom: 8px;
+}
+
+.bicicletas a {
+  place-self: end;
+}
+
+.bicicletas li {
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-conteudo img {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.bicicletas ul {
+  display: grid;
+  gap: 16px;
+}
+
+/* outra alternativa para espaçar os elementos seria:
+.bicicletas li+li {
+  margin-top: 16px
+} */
