@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+/* o .seguros, esta dentro do id seguros, portanto, vai ter o padding-top de 0px e não de 60px */
+#seguros .seguros {
+  padding-top: 0px;
+
+}
+
 .seguros h2 {
   grid-column: 1/-1;
 }
@@ -20,6 +26,7 @@
   padding: 32px 32px 32px 60px;
   display: grid;
   grid-template-columns: 1fr auto;
+  border-radius: 4px;
 }
 
 .seguros-item h3 {
